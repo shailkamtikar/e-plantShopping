@@ -80,6 +80,7 @@ function ProductList({ onHomeClick }) {
           </a>
         </div>
         <div className="nav-links">
+          <a href="#home" onClick={handleHomeClick}>Home</a>
           <a href="#plants" onClick={handlePlantsClick}>Plants</a>
           <a href="#cart" onClick={handleCartClick} className="cart-link" aria-label="Shopping cart">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" height="40" width="40">
