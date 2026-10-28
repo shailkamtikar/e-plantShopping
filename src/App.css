@@ -1,0 +1,73 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; color: #222; background: #fff; }
+
+/* Landing page */
+.landing-page { position: relative; min-height: 100vh; }
+.landing-page.fade-out { display: none; }
+.background-image {
+  position: absolute; inset: 0;
+  background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url('https://cdn.pixabay.com/photo/2017/09/04/18/39/leaves-2714951_1280.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+.content { position: relative; z-index: 1; color: #fff; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; gap: 40px; }
+.landing_content { text-align: center; margin-top: 60px; }
+.landing_content h1 { font-size: 3rem; margin: 0 0 10px; }
+.landing_content p { font-size: 1.4rem; }
+.divider { width: 120px; height: 3px; background: #4caf50; margin: 15px auto; }
+.get-started-button, .get-started-button1 {
+  background: #4caf50; color: #fff; border: none; padding: 12px 28px; font-size: 1.1rem;
+  border-radius: 6px; cursor: pointer; margin-top: 10px;
+}
+.get-started-button:hover, .get-started-button1:hover { background: #3d8b40; }
+.aboutus_container { max-width: 700px; background: rgba(255,255,255,.12); padding: 10px 30px 20px; border-radius: 10px; }
+.about-us h1 { font-size: 1.8rem; }
+.about-us p { line-height: 1.6; }
+
+/* Navbar */
+.navbar { background: #4caf50; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 10px 24px; position: sticky; top: 0; z-index: 10; }
+.brand { display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
+.brand-icon { font-size: 2.2rem; }
+.brand h3 { margin: 0; font-size: 1.4rem; }
+.brand i { font-size: .85rem; }
+.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a { color: #fff; text-decoration: none; font-size: 1.2rem; }
+.cart-link { position: relative; display: inline-flex; }
+.cart_quantity_count { position: absolute; top: 4px; left: 0; right: 0; text-align: center; font-size: 1.1rem; font-weight: bold; color: #fff; pointer-events: none; }
+.cart-link svg { fill: #faf9f9; }
+
+/* Product grid */
+.product-grid { padding: 20px 30px 50px; }
+.plantname_heading { text-align: center; margin-top: 40px; }
+.plant_heading { font-size: 1.8rem; }
+.styled-divider { height: 3px; width: 100px; background: #4caf50; margin: 8px auto 0; }
+.product-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-top: 20px; }
+.product-card { width: 260px; border: 1px solid #ddd; border-radius: 10px; padding: 14px; text-align: center; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,.08); display: flex; flex-direction: column; }
+.product-image { width: 100%; height: 190px; object-fit: cover; border-radius: 8px; background: #e8f5e9; }
+.product-title { font-size: 1.2rem; font-weight: 600; margin-top: 10px; }
+.product-description { font-size: .9rem; color: #555; margin: 8px 0; flex: 1; }
+.product-cost { font-size: 1.1rem; font-weight: bold; color: #2e7d32; margin-bottom: 10px; }
+.product-button { background: #4caf50; color: #fff; border: none; padding: 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; }
+.product-button:hover { background: #3d8b40; }
+.product-button.added-to-cart { background: #9e9e9e; cursor: not-allowed; }
+
+/* Cart */
+.cart-container { max-width: 800px; margin: 30px auto; padding: 0 20px 50px; }
+.cart-total { text-align: center; }
+.cart-empty { text-align: center; color: #666; }
+.cart-item { display: flex; gap: 20px; border: 1px solid #ddd; border-radius: 10px; padding: 14px; margin-bottom: 16px; align-items: center; }
+.cart-item-image { width: 110px; height: 110px; object-fit: cover; border-radius: 8px; background: #e8f5e9; }
+.cart-item-details { display: flex; flex-direction: column; gap: 6px; }
+.cart-item-name { font-size: 1.2rem; font-weight: 600; }
+.cart-item-quantity { display: flex; align-items: center; gap: 12px; }
+.cart-item-button { width: 32px; height: 32px; font-size: 1.2rem; border: 1px solid #4caf50; background: #fff; color: #2e7d32; border-radius: 6px; cursor: pointer; }
+.cart-item-button:hover { background: #e8f5e9; }
+.cart-item-total { font-weight: bold; }
+.cart-item-delete { align-self: flex-start; background: #d32f2f; color: #fff; border: none; padding: 7px 16px; border-radius: 6px; cursor: pointer; }
+.continue_shopping_btn { text-align: center; margin-top: 24px; }
+
+@media (max-width: 600px) {
+  .landing_content h1 { font-size: 2rem; }
+  .navbar { padding: 10px 14px; }
+  .brand i { display: none; }
+}
